@@ -1,3 +1,6 @@
+import random
+import math
+
 # Your code here
 
 
@@ -15,8 +18,14 @@ def slowfun(x, y):
     output, but completes quickly instead of taking ages to run.
     """
     # Your code here
-
-
+    if(x, y) in values:
+        return values[(x, y)]
+    v = math.pow(x,y)
+    v = math.factorial(v)
+    v //= (x + y)
+    v %= 982451653
+    values[(x, y)] = v
+    return v
 
 # Do not modify below this line!
 
